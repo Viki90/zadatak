@@ -1,0 +1,172 @@
+@use "../scss-utils/variables" as *;
+@use "../scss-utils/mixins" as *;
+@use "../scss-utils/media" as *;
+
+.navbar {
+    width: 100%;
+    transition: all 0.2s ease-in;
+    background-color: $orange;
+    @include for-laptop {
+        padding: 0 1rem 0 24px;
+    }
+
+    .container {
+        justify-content: space-between;
+        height: 100%;
+        transition: all 0.2s ease-in;
+        padding: 2rem 0;
+        flex-wrap: wrap;
+        @include for-laptop {
+            justify-content: unset;
+        }
+        @include for-tablet {
+            padding: 1.1rem 0;
+        }
+
+        .nav-menu {
+            @include flex-element;
+            @include for-laptop {
+                flex: unset;
+            }
+            @include for-phone {
+                flex: 1;
+                justify-content: end;
+            }
+            .nav-menu__left {
+                display: flex;
+                @include for-laptop {
+                    display: none;
+                }
+                ul {
+                    display: flex;
+                    align-self: center;
+                    li {        
+                        a {
+                            position: relative;
+                            display: inline-block;
+                            transition: color .2s ease;
+                            padding-left: 20px;
+                            padding-right: 20px;
+                    
+                            &:hover {                               
+                              &::after,
+                              &::before {
+                                width: 100%;
+                                left: 0;
+                              }
+                            }
+                            
+                            &::after,
+                            &::before {
+                              content: ''; 
+                              position: absolute;
+                              top: calc(100% + 44px);
+                              width: 0;
+                              right: 0;
+                              height: 5px;
+                            }
+                            
+                            &::before {
+                              background: $textColor;
+                            }
+                            
+                            &::after {
+                              background: $textColor;
+                            }
+                          }
+                          
+                        
+                        }
+                    }
+
+                    .search{
+                        padding-left: 20px;
+                        position: relative;
+                        .search-txt{
+                            width: 256px;
+                            height: 56px;
+                            border: none;
+                            outline: none;
+                            float: left;
+                            padding: 0;
+                            background: #F2F2F2;
+                            border-radius: 4px 4px 0px 0px;
+                            padding-left: 1rem;
+                        }
+                        .search-btn{
+                            float: right;
+                            @include flex-element-center;
+                            position: absolute;
+                            top: 50%;
+                            left: 90%;
+                            transform: translate(-50% , -50%);
+                            color: $textColor;
+                        }
+                    }
+                   
+                    
+                    
+                    
+            }
+            .nav-menu__right {
+                margin-right: 15px;
+                a {
+                    padding-left: 24px;
+                    &:last-child {
+                        position: relative;
+                        span {
+                            position: absolute;
+                            height: 20px;
+                            width: 20px;
+                            background-color: $green;
+                            border-radius: 50%;
+                            display: inline-block;
+                            left: 85%;
+                            top: 31%;
+                            display: flex;
+                            align-self: center;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 0.8rem;
+                            font-family: 'Inter', sans-serif;
+                        }
+                    }
+                }
+            }
+        }
+
+        .nav-logo {
+            padding-right: 3rem;
+            @include for-laptop {
+                flex: 50%;
+            }
+
+            @include for-phone {
+                flex: unset;
+                padding-right: 0;
+            }
+
+            @include for-tablet {
+                img {
+                    height: 28px;
+                    width: 105px;
+                }
+            }
+        }
+
+        .menu-btn {
+            display: none;
+            @include for-laptop {
+                display: flex;
+                align-self: center;
+                padding-right: 31px;
+            }
+            i {
+                color: $white;
+            }
+        }
+        
+    }
+
+    
+}

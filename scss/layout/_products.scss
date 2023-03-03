@@ -1,0 +1,236 @@
+@use "../scss-utils/variables" as *;
+@use "../scss-utils/mixins" as *;
+@use "../scss-utils/media" as *;
+
+.products {
+    .container {
+        flex-direction: column;
+        @include for-laptop {
+            padding: 0 24px;
+        }
+        .breadcrumb {
+            padding-top: 20px;
+            ul {
+                @include flex-direction-row;
+            }
+            a {
+                color: $textColor;
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 18px;
+                span i {
+                    font-size: 12px;
+                }
+            }
+        }
+        .products-name {
+            @include flex-direction-row;
+            padding-top: 26px;
+            justify-content: space-between;
+            align-items: center;
+            @include for-phone {
+                padding-top: 22px;
+            }
+            h1 {
+                @include for-phone {
+                    font-weight: 600;
+                    font-size: 28px;
+                    line-height: 36px;
+                }
+            }
+            ul {
+                @include for-phone {
+                    display: flex;
+                    justify-content: flex-end;
+                    flex: 1;
+                }
+                a  {
+                    padding-right: 20px;
+                    &:last-child {
+                        padding-right: 0;
+                    }
+                    i {
+                        color: #1E1E1E;
+                    }
+                }
+            }
+        }
+        .product {
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 36px;
+            @include for-tablet {
+                flex-direction: column;
+            }
+            .product-slider {
+                flex: 68%;
+                display: flex;
+                align-items: center;
+                padding-right: 32px;
+                @include for-laptop {
+                    flex: 58%;
+                }
+                @include for-phone {
+                    padding-right: 0;
+                }
+                .product-img {
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .arrow-btn {
+                    width: 56px;
+                    height: 56px;
+                    border-radius: 50%;
+                    border: none;
+                    background: $greey;
+                    @include for-phone {
+                        width: 30px;
+                        height: 30px;
+                        i {
+                            width: 15px;
+                        }
+                    }
+                }
+            }
+            .product-info {
+                background-color: $greey;
+                padding: 24px 32px 66px 32px;
+                flex: 40;
+                
+                p {
+                    span {
+                        color: $orange;
+                    }
+                }
+                .product-description {
+                    padding-top: 13px;
+                    padding-bottom: 23px;
+                }
+                .select-boxes {
+                    display: flex;
+                    @include for-phone {
+                        flex-direction: column;
+                    }
+                    .custom-select {
+                        width: 100%;
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        &:first-child {
+                            padding-right: 5px;
+                            @include for-phone {
+                                padding-right: 0;
+                                padding-bottom: 1rem;
+                            }
+                        }
+                        &:last-child {
+                            padding-left: 5px;
+                            @include for-phone {
+                                padding-left: 0;
+                            }
+                        }
+                        span {
+                            background: $white;
+                            color: #6E6E6E;
+                            font-family: 'Inter';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 11px;
+                            line-height: 18px;
+                            padding-left: 10px;
+                            padding-top: 4px;
+                        }
+                        select {                            
+                            display: block;
+                            padding-top: 4px;
+                            padding-left: 10px;
+                            padding-bottom: 11px;
+                            margin: 0;
+                            outline:none; 
+                            line-height: 1.2;
+                            background: $white;
+                            color: $textColor;
+                            font-family: 'Inter';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 18px;
+                            border: 0;
+                        }
+                    }
+                }
+                .product-checkboxes {
+                    padding-top: 25px;
+                    padding-bottom: 25px;
+                    .checkbox-label {
+                        display: block;
+                        position: relative;
+                        padding-left: 30px;
+                        cursor: pointer;
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 24px;
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+                        input {
+                            position: absolute;
+                            opacity: 0;
+                            cursor: pointer;
+                            height: 0;
+                            width: 0;
+                            &:checked {
+                                ~ {
+                                    .checkmark {
+                                        background-color: $green;
+                                        border: none;
+                                        &:after {
+                                            display: block;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        .checkmark {
+                            border: 1px solid black;
+                            &:after {
+                                left: 9px;
+                                top: 5px;
+                                width: 5px;
+                                height: 10px;
+                                border: solid white;
+                                border-width: 0 3px 3px 0;
+                                -webkit-transform: rotate(45deg);
+                                -ms-transform: rotate(45deg);
+                                transform: rotate(45deg);
+                            }
+                        }
+                    }
+                    .checkmark {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 20px;
+                        width: 20px;
+                        border-radius: 4px;
+                        background-color: $white;
+                        
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

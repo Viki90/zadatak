@@ -1,0 +1,71 @@
+@use "../scss-utils/variables" as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;600;700;800;900&family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+
+h1 {
+    // font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;     
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    color: $textColor
+}
+
+h2 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 36px;
+    color: $textColor;
+}
+
+p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $textColor
+}
+
+a {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: $white;
+    text-decoration: none;
+}
+
+i {
+    width: 18px;
+    height: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+input {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+th, td {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: $textColor;
+}
+
+th {
+    color: $orange;
+}

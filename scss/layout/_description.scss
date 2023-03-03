@@ -1,0 +1,64 @@
+@use "../scss-utils/variables" as *;
+@use "../scss-utils/mixins" as *;
+@use "../scss-utils/media" as *;
+
+.description {
+    hr {
+        color: $greey;
+    }
+    padding-bottom: 60px;
+    .container {
+        @include for-laptop {
+            padding: 0 24px;
+        }
+        .desc {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding-top: 60px;
+            @include for-tablet {
+                flex-direction: column;
+                padding-top: 24px;
+            }
+            .desc-info {
+                flex: 50%;
+                @include for-tablet {
+                    order: 2;
+                    padding-top: 24px;
+                }
+                p {
+                    max-width: 488px;
+                    align-self: flex-start;
+                    padding-top: 32px;
+                    @include for-laptop {
+                        max-width: 430px;
+                    }
+                    @include for-tablet {
+                        max-width: unset;
+                        padding-top: 24px;
+                    }
+                }
+                .more-btn {
+                    margin-top: 32px;
+                    @include btn-style;
+                    width: 140px;
+                    height: 48px;
+                    color: $orange;
+                    border: 2px solid $greey;
+                    background-color: $white;
+                }
+            }
+            .desc-img {
+                flex: 50%;
+                @include for-tablet {
+                    padding-top: 24px;
+                    order: 1;
+                }
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}

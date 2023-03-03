@@ -1,0 +1,101 @@
+@use "../scss-utils/variables" as *;
+@use "../scss-utils/mixins" as *;
+@use "../scss-utils/media" as *;
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(229, 229, 229, 0.5);
+    display: grid;
+    place-items: center;
+    transition: all 0.3s linear;
+    visibility: hidden;
+    z-index: -10;
+    .modal-container {
+        padding: 20px 32px;
+        background: $white;
+        border-radius: 3px;
+        width: 90vw;
+        max-width: 480px;
+        text-align: center;
+        display: grid;
+        place-items: center;
+        position: relative;
+        .close-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2rem;
+            background: transparent;
+            border-color: transparent;
+            color: $textColor;
+            cursor: pointer;
+            transition: all 0.3s linear;
+        }
+        h2 {
+            text-align: left;
+            display: flex;
+            justify-items: start;
+            width: 100%;
+            align-self: flex-start;
+        }
+        p {
+            text-align: left;
+            display: flex;
+            justify-items: start;
+            width: 100%;
+            align-self: flex-start;
+            padding-top: 16px;
+            padding-bottom: 24px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            input {
+                height: 56px;
+                @include form-style;
+                background: $greey;
+
+            }
+
+            textarea {
+                height: 128px;
+                @include form-style;
+                background: $greey;
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+                padding-left: 16px;
+                padding-top: 19px;
+            }
+
+            .btn-group {
+                display: flex;
+                justify-content: flex-end;
+                #sndMsg {
+                    background: $orange;
+                    color: $white;
+                    width: 160px;
+                }
+                #cancel {
+                    background: none;
+                    color: $orange;
+                    width: unset;
+                    margin-right: 24px;
+                }
+            }
+        }
+    }
+  }
+  .open-modal {
+    visibility: visible;
+    z-index: 10;
+  }
+  
+  
