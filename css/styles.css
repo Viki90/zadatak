@@ -507,6 +507,11 @@ th {
   font-size: 14px;
   line-height: 18px;
   border: 0;
+  appearance: none;
+  background-image: url("../../img/arrow.png");
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 10%, 0 0;
+  background-size: 0.65em auto, 100%;
 }
 .products .container .product .product-info .product-checkboxes {
   padding-top: 25px;
