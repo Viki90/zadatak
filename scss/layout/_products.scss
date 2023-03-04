@@ -72,8 +72,12 @@
                 @include for-laptop {
                     flex: 58%;
                 }
+                @include for-tablet {
+                    padding-right: 0;
+                }
                 @include for-phone {
                     padding-right: 0;
+                    position: relative;
                 }
                 .product-img {
                     img {
@@ -87,13 +91,22 @@
                     border-radius: 50%;
                     border: none;
                     background: $greey;
+                    @include for-tablet {
+                        width: 48px;
+                        height: 48px;
+                    }
                     @include for-phone {
-                        width: 30px;
-                        height: 30px;
-                        i {
-                            width: 15px;
+                        position: absolute;
+                    }
+                    i {
+                        @include for-tablet {
+                            width: 13px;
+                            height: 20px;
                         }
                     }
+                }
+                .arrow-btn.right {
+                    left: 86%;
                 }
             }
             .product-info {
