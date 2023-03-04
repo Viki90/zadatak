@@ -164,6 +164,9 @@ th {
     display: none;
   }
 }
+.navbar .container .nav-menu .nav-menu__left .close-nav {
+  display: none;
+}
 .navbar .container .nav-menu .nav-menu__left ul {
   display: flex;
   align-self: center;
@@ -272,12 +275,59 @@ th {
     display: flex;
     align-self: center;
     padding-right: 31px;
+    border: none;
+    background: none;
   }
 }
 .navbar .container .menu-btn i {
   color: #fff;
 }
 
+@media (max-width: 1280px) {
+  body {
+    position: relative;
+  }
+  .show-links {
+    display: block;
+    height: 100vh;
+    width: 100vh;
+    position: absolute;
+    z-index: 3;
+    background: #FE5E41;
+  }
+}
+@media (max-width: 1280px) {
+  .navbar .container .nav-menu .nav-menu__left.show-list {
+    display: flex;
+    z-index: 10;
+    flex-direction: column;
+  }
+  .navbar .container .nav-menu .nav-menu__left.show-list .close-nav {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    background: transparent;
+    border-color: transparent;
+    color: #1E1E1E;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    display: block;
+  }
+  .navbar .container .nav-menu .nav-menu__left.show-list ul {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+  .navbar .container .nav-menu .nav-menu__left.show-list ul li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    pointer-events: none;
+  }
+  .navbar .container .nav-menu .nav-menu__left.show-list ul li a:hover {
+    pointer-events: none;
+  }
+}
 .products .container {
   flex-direction: column;
 }

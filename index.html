@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <div class="dropdownMenu"></div>
     <nav class="navbar">
         <div class="container">
-            <div class="menu-btn" id="menu-btn">
+            <button class="menu-btn nav-toggle" id="menu-btn">
                 <i class="fa-solid fa-bars"></i>
-            </div>
+            </button>
             <div class="nav-logo">
                 <a href="#">
                     <img src="img/LOGO.png" alt="Logo">
@@ -21,6 +22,10 @@
             </div>
             <div class="nav-menu">
                 <div class="nav-menu__left">
+                    <button class="close-nav">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    
                     <ul>
                         <li><a href="#">Products</a></li>
                         <li><a href="#">Services</a></li>

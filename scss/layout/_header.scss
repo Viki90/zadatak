@@ -37,6 +37,9 @@
                 @include for-laptop {
                     display: none;
                 }
+                .close-nav {
+                    display: none;
+                }
                 ul {
                     display: flex;
                     align-self: center;
@@ -160,6 +163,8 @@
                 display: flex;
                 align-self: center;
                 padding-right: 31px;
+                border: none;
+                background: none;
             }
             i {
                 color: $white;
@@ -167,6 +172,62 @@
         }
         
     }
+}
+
+
+@include for-laptop {
+    body {
+        position: relative;
+    }
+    .show-links {
+        display: block;
+        height: 100vh;
+        width: 100vh;
+        position: absolute;
+        z-index: 3;
+        background: $orange;
+    }
 
     
+}
+
+@include for-laptop {
+    .navbar {
+        .container {
+            .nav-menu {
+                .nav-menu__left.show-list  {
+                    display: flex;
+                    z-index: 10;
+                    flex-direction: column;
+                    .close-nav {
+                        position: absolute;
+                        top: 1rem;
+                        right: 1rem;
+                        font-size: 2rem;
+                        background: transparent;
+                        border-color: transparent;
+                        color: $textColor;
+                        cursor: pointer;
+                        transition: all 0.3s linear;
+                        display: block;
+                    }
+                    ul {
+                        flex-direction: column; 
+                        width: 100%;
+                        justify-content: center;
+                        li {
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+                            pointer-events: none;
+                            a {
+                                &:hover {
+                                    pointer-events: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
