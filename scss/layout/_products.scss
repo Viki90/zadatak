@@ -71,13 +71,13 @@
                 padding-right: 32px;
                 @include for-laptop {
                     flex: 58%;
+                    position: relative;
                 }
                 @include for-tablet {
                     padding-right: 0;
                 }
                 @include for-phone {
                     padding-right: 0;
-                    position: relative;
                 }
                 .product-img {
                     img {
@@ -91,13 +91,14 @@
                     border-radius: 50%;
                     border: none;
                     background: $greey;
+                    @include for-laptop {
+                        position: absolute;
+                    }
                     @include for-tablet {
                         width: 48px;
                         height: 48px;
                     }
-                    @include for-phone {
-                        position: absolute;
-                    }
+                    
                     i {
                         @include for-tablet {
                             width: 13px;
@@ -107,12 +108,21 @@
                 }
                 .arrow-btn.right {
                     left: 86%;
+                    @include for-tablet {
+                        left: 93%;
+                    }
+                    @include for-phone {
+                        left: 86%;
+                    }
                 }
             }
             .product-info {
                 background-color: $greey;
                 padding: 24px 32px 66px 32px;
                 flex: 40;
+                @include for-tablet {
+                    padding: 24px 16px 32px 24px;
+                }
                 
                 p {
                     span {
