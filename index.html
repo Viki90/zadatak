@@ -10,9 +10,9 @@
 </head>
 <body>
     <div class="dropdownMenu"></div>
-    <nav class="navbar">
+    <nav class="navbar" aria-label="primary navigation">
         <div class="container">
-            <button class="menu-btn nav-toggle" id="menu-btn">
+            <button class="menu-btn nav-toggle" id="menu-btn" aria-label="menu">
                 <i class="fa-solid fa-bars"></i>
             </button>
             <div class="nav-logo">
@@ -22,19 +22,18 @@
             </div>
             <div class="nav-menu">
                 <div class="nav-menu__left">
-                    <button class="close-nav">
+                    <button class="close-nav" aria-bale="close navigation">
                         <i class="fas fa-times"></i>
                     </button>
-                    
-                    <ul>
+                    <ul role=“menu” aria-labelledby=“menu-button-1”>
                         <li><a href="#">Products</a></li>
                         <li><a href="#">Services</a></li>
                         <li><a href="#">About us</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                     <form class="search">
-                        <input  class="search-txt" type="text" name="search" placeholder="Search">
-                            <a class="search-btn" href="#">
+                        <input  class="search-txt" type="text" name="search" placeholder="Search" aria-label="write your input">
+                            <a class="search-btn" href="#" aria-label="search website">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </a>
                     </form>
@@ -51,7 +50,7 @@
         </div>
     </nav>
     <main>
-        <section class="products">
+        <section class="products" aria-label="products">
             <div class="container">
                 <div class="breadcrumb">
                     <ul>
@@ -96,7 +95,7 @@
                 </div>
                 <div class="product">
                     <div class="product-slider">
-                        <button id="leftArr" class="arrow-btn">
+                        <button id="leftArr" class="arrow-btn" aria-label="next slide">
                             <span><i class="fa-solid fa-chevron-left"></i></span>
                         </button>
                         <div class="product-item">
@@ -104,7 +103,7 @@
                                 <img src="img/product.png" alt="Product">
                             </div>
                         </div>
-                        <button id="rightArr" class="arrow-btn right">
+                        <button id="rightArr" class="arrow-btn right" aria-label="previous slide">
                             <span><i class="fa-solid fa-chevron-right"></i></span>
                         </button>
                     </div>
@@ -145,23 +144,23 @@
                         <div class="modal-overlay">
                             <div class="modal-container">
                                 <h2>Contact us</h2>
-                                <button class="close-btn">
+                                <button class="close-btn" aria-label="close modal">
                                     <i class="fas fa-times"></i>
                                 </button>
                                 <p>We'll get back to you as soon as possible.</p>
                                 <form>
-                                    <input type="email" id="email" name="email" autocomplete="email" placeholder="Your e-mail" required tabindex="1" aria-required="true">
-                                    <textarea rows="12" id="message" name="message" placeholder="Your message" required tabindex="2" aria-required="true"></textarea>
+                                    <input type="email" id="email" name="email" autocomplete="email" placeholder="Your e-mail" required tabindex="1" aria-required="true" aria-label="write your email">
+                                    <textarea rows="12" id="message" name="message" placeholder="Your message" required tabindex="2" aria-required="true" aria-label="write your message"></textarea>
                                     <div class="btn-group">
-                                        <button id="cancel" class="normal-btn" type="reset">Cancel</button>
-                                        <button id="sndMsg" class="normal-btn" type="submit">Send message</button>
+                                        <button id="cancel" class="normal-btn" type="reset" aria-label="cancel sending message">Cancel</button>
+                                        <button id="sndMsg" class="normal-btn" type="submit" aria-label="send message">Send message</button>
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="links">
+                <div class="links" aria-label="breadcrumbs">
                     <ul>
                         <li>
                             <a href="#">Description</a>
@@ -176,7 +175,7 @@
                 </div>
             </div>
         </section>
-        <section class="description">
+        <section class="description" aria-label="product description"> 
             <hr>
             <div class="container">
                 <div class="desc">
@@ -184,7 +183,7 @@
                         <h2>Product description</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                         <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-                        <button class="more-btn">More info</button>
+                        <button class="more-btn" aria-label="show more info">More info</button>
                     </div>
                     <div class="desc-img">
                         <img src="img/bicycles.png" alt="Product desc">
