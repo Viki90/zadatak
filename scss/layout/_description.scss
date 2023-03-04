@@ -7,6 +7,9 @@
         color: $greey;
     }
     padding-bottom: 60px;
+    @include for-tablet {
+        padding-bottom: 32px;
+    }
     .container {
         .desc {
             display: flex;

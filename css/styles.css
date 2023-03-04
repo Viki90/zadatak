@@ -613,6 +613,11 @@ th {
 .description hr {
   color: #F2F2F2;
 }
+@media (max-width: 768px) {
+  .description {
+    padding-bottom: 32px;
+  }
+}
 .description .container .desc {
   display: flex;
   justify-content: space-between;
