@@ -545,8 +545,8 @@ th {
   border: 1px solid black;
 }
 .products .container .product .product-info .product-checkboxes .checkbox-label .checkmark:after {
-  left: 9px;
-  top: 5px;
+  left: 8px;
+  top: 4px;
   width: 5px;
   height: 10px;
   border: solid white;
@@ -576,11 +576,6 @@ th {
 .description hr {
   color: #F2F2F2;
 }
-@media (max-width: 1280px) {
-  .description .container {
-    padding: 0 24px;
-  }
-}
 .description .container .desc {
   display: flex;
   justify-content: space-between;
@@ -600,6 +595,8 @@ th {
   .description .container .desc .desc-info {
     order: 2;
     padding-top: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }
 .description .container .desc .desc-info p {
@@ -660,6 +657,11 @@ th {
   padding-top: 32px;
   padding-bottom: 39px;
 }
+@media (max-width: 480px) {
+  .specification .container .specification-table h2 {
+    font-size: 24px;
+  }
+}
 .specification .container .specification-table table {
   text-align: left;
   width: 1216px;
@@ -671,10 +673,26 @@ th {
   background: none;
   position: relative;
   padding-left: 20px;
+  padding-bottom: 8px;
 }
 .specification .container .specification-table td {
   padding: 8px 20px;
   position: relative;
+}
+.specification .container .specification-table td:first-child {
+  width: 187px;
+}
+.specification .container .specification-table td:nth-child(2) {
+  width: 124px;
+}
+.specification .container .specification-table td:nth-child(3) {
+  width: 95px;
+}
+.specification .container .specification-table td:nth-child(4) {
+  width: 125px;
+}
+.specification .container .specification-table td:nth-child(5) {
+  width: 98px;
 }
 .specification .container .specification-table tbody tr:nth-child(odd) {
   background-color: #fff;
